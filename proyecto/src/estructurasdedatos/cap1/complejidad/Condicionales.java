@@ -88,4 +88,7 @@ else   {
                System.out.println("se divide por 0");
           }
    }
+
+    private Condicionales() {
+    }
 }
