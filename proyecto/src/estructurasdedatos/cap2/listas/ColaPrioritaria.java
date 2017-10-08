@@ -7,9 +7,9 @@ package estructurasdedatos.cap2.listas;
 
 /**
  *
- * @author Manuel Prada
+ * @author ManuelPrada
  */
-public class ColaPrioritaria {
+public class ColaPrioridad {
 
     private Cola normal;
     private Cola empresarial;
@@ -21,8 +21,8 @@ public class ColaPrioritaria {
         this.prioritaria = new Cola();
     }
 
-    public void hacercola(int cedula, int prioriaria) {
-        if (prioriaria == 0) {
+    public void hacercola(int cedula, int prioridad) {
+        if (prioridad == 0) {
             if (normal.size() < empresarial.size()) {
                 this.normal.encolar(cedula);
             } else {
@@ -30,7 +30,7 @@ public class ColaPrioritaria {
             }
         } else {
 
-           if (prioriaria ==1){
+           if (prioridad ==1){
             this.prioritaria.encolar(cedula);
             }
         }
