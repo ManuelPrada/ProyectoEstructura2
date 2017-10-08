@@ -7,8 +7,56 @@ package estructurasdedatos.cap2.listas;
 
 /**
  *
- * @author tusk
+ * @author Manuel Prada
  */
 public class ColaPrioritaria {
-    
+
+    private Cola normal;
+    private Cola empresarial;
+    private Cola prioritaria;
+
+    public void crearcolas() {
+        this.normal = new Cola();
+        this.empresarial = new Cola();
+        this.prioritaria = new Cola();
+    }
+
+    public void hacercola(int cedula, int prioriaria) {
+        if (prioriaria == 0) {
+            if (normal.size() < empresarial.size()) {
+                this.normal.encolar(cedula);
+            } else {
+                this.empresarial.encolar(cedula);
+            }
+        } else {
+
+           if (prioriaria ==1){
+            this.prioritaria.encolar(cedula);
+            }
+        }
+
+    }
+
+    public void listar() {
+        System.out.println("cola normal:");
+        normal.listarr();
+        System.out.println("   ");
+        System.out.println("cola empresarial");
+        empresarial.listarr();
+        System.out.println("    ");
+        System.out.println("cola prioritaria");
+        prioritaria.listarr();
+
+    }
+
+    public void atender() {
+        
+        for (int i = 0; i <= prioritaria.size(); i++) {
+            prioritaria.desencolar();
+        }
+        if (prioritaria.size() == 0) {
+            normal.desencolar();
+            empresarial.desencolar();
+        }
+    }
 }
