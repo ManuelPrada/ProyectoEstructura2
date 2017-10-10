@@ -10,52 +10,76 @@ import estructurasdedatos.utiles.nodos.NodoPersona;
  * @author Manuel Prada
  */
 public class Cola {
-    
-    private NodoPersona primero; 
-    private NodoPersona ultimo; 
-    private NodoPersona actual; 
-        
-    
-    public void crearCola() 
-    { 
-    this.primero = null; 
-    this.ultimo = null; 
-    } 
-    
-    
-    public void hacerCola (String nombre, String cedula) 
-    { 
-        NodoPersona nuevo = new NodoPersona(); 
-        nuevo.setNombre(nombre);
-        nuevo.setCedula(cedula);
-        if(( this.primero==null)&&( this.ultimo== null)) 
-        { 
-            this.primero = nuevo; 
-            this.ultimo = nuevo; 
-        } 
-        else 
-        { 
-            ultimo.setSiguiente(nuevo); 
-            ultimo = nuevo; 
-        } 
-    } 
-    
-    
-    public void atender() 
-    { 
-        primero = primero.getSiguiente(); 
-    } 
-    
-   
-    public void listar() 
-    { 
-        actual = primero; 
-        while( actual!=null) 
-        { 
-            System.out.println( actual.getNombre()+" "+actual.getCedula()); 
-            actual = actual.getSiguiente(); 
-        } 
-    } 
+
+    private NodoPersona dato;
+    private NodoPersona tope;
+    private NodoPersona ultimo;
+
+    public void crearcola() {
+        tope = ultimo = null;
+    }
+
+    public boolean vacia() {
+        return (this.tope == null);
+    }
+
+    public void encolar(int cedula) {
+        NodoPersona nuevo = new NodoPersona();
+      
+        if (vacia()) {
+            this.tope = nuevo;
+            this.ultimo = nuevo;
+        } else {
+            ultimo.setSiguiente(nuevo);
+            ultimo = nuevo;
+        }
+
+    }
+
+    public void desencolar() {
+        if (vacia()) {
+            System.out.println("Cola vacia");
+        } else {
+            tope = tope.getSiguiente();
+
+        }
+    }
+
+    public void listarr() {
+        NodoPersona aux = tope;
+
+        System.out.println("");
+        int i = 0;
+        while (aux != null) {
+
+
+            aux = aux.getSiguiente();
+            i++;
+        }
+
+    }
+
+    public int size() {
+        NodoPersona aux = tope;
+        int contador = 0;
+        while (aux != null) {
+            contador++;
+            aux = aux.getSiguiente();
+
+        }
+        return contador;
+
+    }
+
  
-    
-} 
+    public NodoPersona getDato() {
+        return dato;
+    }
+
+
+    public void setDato(int cedula) {
+        NodoPersona p = new NodoPersona();
+        p = dato;
+    }
+
+}
