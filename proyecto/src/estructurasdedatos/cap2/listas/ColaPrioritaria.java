@@ -8,7 +8,7 @@ package estructurasdedatos.cap2.listas;
  *
  * @author ManuelPrada
  */
-public class ColaPrioridad {
+public class ColaPrioritaria {
 
     private Cola normal;
     private Cola empresarial;
