@@ -45,4 +45,47 @@ private Mapa <CV , VL> primero;
             Mapa<CV, VL> aux = primero;
             while (aux != null) {
                 if (aux.getClave() == clave) {
-         
+                    System.out.println("Llave= " + aux.getClave() + "Valor --> " + aux.getValor());
+                }
+                aux = aux.getNext();
+            }
+
+        }
+
+    }
+
+    public void printDiccionario() {
+        if (!empty()) {
+            Mapa<CV, VL> aux = this.primero;
+            int i = 1;
+            while (aux != null) {
+                System.out.println("Elemento: " + i + ".  Llave= " + aux.getClave() + "  Valor --> " + aux.getValor());
+                aux = aux.getNext();
+                i++;
+            }
+            System.out.println("\n");
+        }
+    }
+
+    public void remove(CV clave) {
+        if (empty()){
+            
+            System.out.println("Diccionario Vacio");
+        }
+        System.out.println("\n");
+        if (primero.getClave() == clave) {
+            primero = primero.getNext();
+            System.out.println("El elemento con Llave: " + primero.getClave() + "ha sido eliminado");
+        } else {
+            Mapa<CV, VL> aux = this.primero;
+            while (aux.getNext().getClave() != clave) {
+                aux = aux.getNext();
+            }
+            Mapa<CV, VL> aux2 = aux.getNext().getNext();
+            aux.setNext(aux2);
+            System.out.println("El dato " + clave + " ha sido eliminado" + "\n");
+        }
+
+    }
+
+}
