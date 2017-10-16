@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package estructurasdedatos.cap2.listas;
+package estructurasdedatos.utiles.nodos;
 
 /**
  *
- * @author ManuelPrada
+ * @author manuel
  */
-public class MatrizDispersa {
+public class NodoMapa {
     
 }
