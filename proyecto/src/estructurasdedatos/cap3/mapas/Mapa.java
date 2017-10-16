@@ -7,7 +7,7 @@ package estructurasdedatos.cap3.mapas;
 
 /**
  *
- * @author tusk
+ * @author ManuelPrada
  */
 public class Mapa <CV,VL> {
     
@@ -24,4 +24,22 @@ public class Mapa <CV,VL> {
        return clave;
    }
     
+   public void setClave(CV clave) {
+       this.clave = clave;
+   }
+     public VL getValor(){
+       return valor;
+   }
+    
+   public void setValor(VL valor) {
+       this.valor = valor;
+   }
+   
+   public Mapa getNext(){
+       return next;
+   }
+   
+   public void setNext(Mapa next){
+       this.next = next;
+   }
 }
