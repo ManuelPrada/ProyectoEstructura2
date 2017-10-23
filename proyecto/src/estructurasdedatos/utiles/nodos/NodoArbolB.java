@@ -4,21 +4,19 @@
  * and open the template in the editor.
  */
 package estructurasdedatos.utiles.nodos;
+import estructurasdedatos.cap4.arboles.ArbolB;
 
 /**
  *
  * @author Manuel Prada
  */
 public class NodoArbolB {
-
     
-
         public ArbolB hijoderecho;
 
         public ArbolB hijoizquierdo;
 
         public int dato;
-
 
 
         public void NodoArbolB() {
@@ -30,11 +28,6 @@ public class NodoArbolB {
             this.dato = 0;
 
         }
-
-    
-
-    
-
 }
 
     
