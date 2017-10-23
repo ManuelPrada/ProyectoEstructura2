@@ -7,8 +7,35 @@ package estructurasdedatos.utiles.nodos;
 
 /**
  *
- * @author tusk
+ * @author Manuel Prada
  */
 public class NodoArbolB {
+
     
+
+        public ArbolB hijoderecho;
+
+        public ArbolB hijoizquierdo;
+
+        public int dato;
+
+
+
+        public void NodoArbolB() {
+
+            this.hijoderecho = null;
+
+            this.hijoizquierdo = null;
+
+            this.dato = 0;
+
+        }
+
+    
+
+    
+
 }
+
+    
+
