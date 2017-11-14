@@ -4,50 +4,79 @@
  * and open the template in the editor.
  */
 package estructurasdedatos.utiles.nodos;
+
 /**
  *
  * @author Manuel Prada
  */
 public class NodoArbolB {
-    
-    private int setInsertar;
-    private int getDato;
+
+    private NodoArbolB hijoDerecho;
+
+    private NodoArbolB hijoIzquierdo;
+
+    private NodoArbolB p;
+
     private int dato;
-    private NodoArbolB hijoDer;
-    private NodoArbolB hijoIzq;
 
-    public NodoArbolB(int dato, NodoArbolB hijoDer, NodoArbolB hijoIzq) {
+    public NodoArbolB(int dato) {
 
-        this.hijoDer = hijoDer;
-        this.hijoIzq = hijoIzq;
         this.dato = dato;
+
+        this.hijoDerecho = null;
+
+        this.hijoIzquierdo = null;
+
+        this.p = null;
+
     }
 
     public void setDato(int dato) {
+
         this.dato = dato;
-    }
-
-    public void setHijoDer(NodoArbolB hijoDer) {
-        this.hijoDer = hijoDer;
-    }
-
-    public void setHijoIzq(NodoArbolB hijoIzq) {
-        this.hijoDer = hijoIzq;
-    }
-
-    public NodoArbolB getHijoDer() {
-        return hijoDer;
-    }
-
-    public NodoArbolB getHijoIzq() {
-        return hijoIzq;
 
     }
+
+    public void setHijoDerecho(NodoArbolB hijoDerecho) {
+
+        this.hijoDerecho = hijoDerecho;
+
+    }
+
+    public void setHijoIzquierdo(NodoArbolB hijoIzquierdo) {
+
+        this.hijoIzquierdo = hijoIzquierdo;
+
+    }
+
+    public NodoArbolB getHijoDerecho() {
+
+        return hijoDerecho;
+
+    }
+
+    public NodoArbolB getHijoIzquierdo() {
+
+        return hijoIzquierdo;
+
+    }
+
+    public int getDato() {
+
+        return dato;
+
+    }
+
+    public void setP(NodoArbolB p) {
+
+        this.p = p;
+
+    }
+
+    public NodoArbolB getP() {
+
+        return p;
+
+    }
+
 }
-
-  
-       
-
-
-    
-      
