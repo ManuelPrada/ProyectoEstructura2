@@ -9,25 +9,25 @@ package estructurasdedatos.cap3.mapas;
  *
  * @author ManuelPrada
  */
-public class Diccionario <CV,VL> {
+public class Diccionario<CV, VL> {
 
-private Mapa <CV , VL> primero;    
-    
+    private Mapa<CV, VL> primero;
+
     public boolean empty() {
         return primero.getClave() == null;
     }
 
     public void add(CV clave, VL valor) {
-        Mapa<CV, VL> nuevo = new Mapa<>(clave,valor);
+        Mapa<CV, VL> nuevo = new Mapa<>(clave, valor);
         if (empty()) {
-            this.primero.setClave (clave);
+            this.primero.setClave(clave);
             this.primero.setValor(valor);
         } else {
-            Mapa<CV, VL> aux = this.primero;
+            Mapa<CV, VL> aux = this.primero; // recorre el nodo 
             while (aux.getNext() != null) {
-             if (aux.getClave() != clave) {
-               aux = aux.getNext();
-                    
+                if (aux.getClave() != clave) {
+                    aux = aux.getNext();
+
                 } else {
                     if (aux.getClave() == clave) {
                         aux.setValor(valor);
@@ -68,8 +68,8 @@ private Mapa <CV , VL> primero;
     }
 
     public void remove(CV clave) {
-        if (empty()){
-            
+        if (empty()) {
+
             System.out.println("Diccionario Vacio");
         }
         System.out.println("\n");

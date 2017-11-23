@@ -45,7 +45,7 @@ public class Cola {
         }
     }
 
-    public void listarr() {
+    public void listar() {
         NodoPersona aux = tope;
 
         System.out.println("");

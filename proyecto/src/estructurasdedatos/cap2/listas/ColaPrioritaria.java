@@ -38,13 +38,13 @@ public class ColaPrioritaria {
 
     public void listar() {
         System.out.println("cola normal:");
-        normal.listarr();
+        normal.listar();
         System.out.println("   ");
         System.out.println("cola empresarial");
-        empresarial.listarr();
+        empresarial.listar();
         System.out.println("    ");
         System.out.println("cola prioritaria");
-        prioritaria.listarr();
+        prioritaria.listar();
 
     }
 

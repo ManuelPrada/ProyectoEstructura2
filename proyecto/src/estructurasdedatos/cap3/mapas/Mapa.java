@@ -38,7 +38,7 @@ public class Mapa <CV,VL> {
    public Mapa getNext(){
        return next;
    }
-   
+
    public void setNext(Mapa next){
        this.next = next;
    }

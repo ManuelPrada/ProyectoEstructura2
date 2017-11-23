@@ -85,5 +85,6 @@ public class ListaDoble {
     aux=cabeza;
     
     
+    
     }
 }
